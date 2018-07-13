@@ -1,0 +1,22 @@
+<!-- index band -->
+
+<a href="<%=new_band_url%>"> Create Band</a>
+<h1>All the Bands!!!</h1>
+<table style = "width:100%">
+  <% @bands.each do |band| %>
+  <tr>
+  <td><%=  band.name %></td>
+  <td><a href="<%=band_url(band)%>">Info</a></td>
+  <td><a href="<%=edit_band_url(band)%>"> Edit Band</a> </td>
+  <td>
+    <form action="<%=band_url(band)%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <input type="submit" value="Delete Band">
+    </form>
+  </td>
+  </tr>
+
+  <% end %>
+  </table>
+</ol>
