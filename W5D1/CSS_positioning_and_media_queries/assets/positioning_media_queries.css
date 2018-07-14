@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FEFFF1;
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+ul li a, figcaption a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header > img {
+  width: 100px;
+  float: left;
+}
+
+.ingredients-list {
+
+  list-style: square inside;
+}
+
+ol {
+  list-style: upper-roman inside;
+}
+
+.user_review h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 27px;
+    height: 27px;
+    background-image: url(../assets/stars.png);
+    vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}
+
+
+input[type="submit"]:last-child {
+    background: gold;
+}
+
+input:last-child:hover {
+    -webkit-filter: brightness(90%);
+}
+
+ol li:nth-of-type(2n) {
+  background-color: whitesmoke;
+  margin: 10px 0;
+}
+
+h2 + .user_review {
+    border-top: 1px solid black;
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 20px;
+    display: block;
+}
+
+body {
+  margin: 0 auto;
+    width: 60%;
+}
+
+aside {
+    display: inline-block;
+}
+
+.ingredients-list li {
+    margin: 15px 0px;
+}
+
+input[type="text"], select {
+    display: block;
+    width: 175px;
+}
+
+select {
+    margin: 10px 0;
+    width: 180px;
+}
+
+textarea {
+    width: 350px;
+}
+
+label {
+    display: block;
+}
+/* set the initial display of the hamburger-dropdown to none so that it is invisible)*/
+.hamburger-dropdown {
+  display: none;
+}
+
+
+ /* Find where your main content/sidebar layout breaks and fix it with
+ a single media query in your grid file. Hint: Use an attribute selector */
+@media all and (max-width: 800px) {
+  /* make old nav ul list disappear when width less than 800px */
+    nav ul {
+    display: none;
+  }
+
+  /* make hamburger appear when width less than 800px */
+  .hamburger-dropdown {
+    display: block;
+  }
+  .hamburger-dropdown > li {
+    /* select the containing list element and give it a background using this hamburger file. */
+      background: url(../assets/hamburger.png);
+
+      /* set the width/height and background-size to 50px/50px */
+      width: 50px;
+      height: 50px;
+      background-size: 50px 50px;
+
+      /* make sure dropdown appears below dropdown burger  */
+      position: relative;
+      /* change cursor to hand pointer */
+      cursor: pointer;
+
+
+    }
+
+   .hamburger-dropdown ul {
+     /* use a position property on the unordered list within the hamburger-dropdown
+     so that it does not obstruct the flow of the document and it is
+     directly beneath the list element with the hamburger background */
+     position: absolute;
+
+     /* make list become a flex that is displayed as a column */
+     top: 50px;
+      left: 0;
+      flex-direction: column;
+      cursor: pointer;
+      box-shadow: black 5px 5px 10px;
+
+   }
+
+   /* use a selector to trigger the hover display effect */
+   .hamburger-dropdown:hover ul {
+     display: flex;
+     background: ghostwhite;
+   }
+};
+
+/* (In index.html below first ul li in nav)
+duplicate the html for your unordered list of anchor links
+wrap this in a list element and wrap that list element in another ul
+name the outer ul with a class like "hamburger-dropdown" */
