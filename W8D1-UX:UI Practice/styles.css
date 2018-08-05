@@ -1,0 +1,44 @@
+div {
+  width: 100%;
+  height: 100px;
+  background-image: url('./splash.jpg');
+  background-repeat: no-repeat;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  background-size: cover;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+a {
+  background-color: lightblue;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+}
+p {
+  border-radius: 5px;
+  float: left;
+}
+
+nav.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+section.left{
+  float: left;
+}
+
+section.right{
+  float: right;
+}
+
+footer {
+  display: flex;
+}
